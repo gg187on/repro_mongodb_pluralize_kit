@@ -26,3 +26,7 @@ to run your app, do `npm i` and then `npm run dev`, website will be avaiable on 
 8. again open app and visit `/todos` page
 9. In that moment `sondies` collection is created
 10. Now as `sondies` exist, even code in endpoint (that saves data do collection) use `sondies`.
+
+## What actuall issue is?
+
+Pluralize doesn't work if we touch collection (reading) before it's created, in that case, mongoose somehow automatically generate collection with pluralized name even if pluralize option is set to null.
