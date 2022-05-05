@@ -8,7 +8,7 @@ to run your app, do `npm i` and then `npm run dev`, website will be avaiable on 
 
 `./src/lib/db/sondy.js` contains schema and model.
 
-`./src/lib/db/init.js` contains init function, we call in `.then()` after `mongoose.connect` is done, in this file we don't create collection, but instead try to read it
+`./src/lib/db/init.js` contains init function, we call in `.then()` after `mongoose.connect` is done, in this file we don't create collection, but instead try to read it (even bofore collection was created)
 
 `./src/hooks.js` contains pluralize and connection code. Hooks (like handle function) are executed at every request, and are imported at first request to website
 
